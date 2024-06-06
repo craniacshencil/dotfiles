@@ -34,6 +34,17 @@ vim.keymap.set("n", "N", "Nzzz")
 -- register-copying black-magic-sorcery-cluster-fuckery
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
+
+-- Autocomplete brackets and quotes
+vim.cmd('inoremap " ""<left>')
+vim.cmd("inoremap ' ''<left>")
+vim.cmd("inoremap ` ``<left>")
+vim.cmd("inoremap ( ()<left>")
+vim.cmd("inoremap [ []<left>")
+vim.cmd("inoremap { {}<left>")
+vim.cmd("inoremap {<CR> {<CR>}<ESC>O")
+vim.cmd("inoremap {;<CR> {<CR>};<ESC>O")
+
 -- copy-paste to system-clipboard(goated but can't figure it out)
 -- no tmux noob
 -- vim.keymap.set("n", "<leader>y", '"+y')
