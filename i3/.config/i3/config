@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 
-#setting picom and feh
+#setting picom, feh, rofi
 exec --no-startup-id picom  
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/cool_bg.jpg 
 bindsym $mod+space exec rofi -show combi
