@@ -29,7 +29,7 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzz")
-vim.keymap.set("n", "N", "Nzzz")
+vim.keymap.set("n", "n", "nzzz")
 
 -- register-copying black-magic-sorcery-cluster-fuckery
 vim.keymap.set("x", "<leader>p", "\"_dP")
@@ -50,4 +50,6 @@ vim.cmd("inoremap {;<CR> {<CR>};<ESC>O")
 -- vim.keymap.set("n", "<leader>y", '"+y')
 -- vim.keymap.set("v", "<leader>y", '"+y')
 -- vim.keymap.set("n", "<leader>Y", '"*Y')
+
+-- prime's blessings complete there
 
