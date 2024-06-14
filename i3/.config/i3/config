@@ -11,7 +11,7 @@
 
 
 #setting picom, feh, rofi
-exec --no-startup-id picom  
+exec --no-startup-id picom --experimental-backends  
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/cool_bg.jpg 
 bindsym $mod+space exec rofi -show combi
 
