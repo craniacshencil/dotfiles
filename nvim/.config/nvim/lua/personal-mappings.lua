@@ -3,7 +3,6 @@ vim.api.nvim_set_keymap('i', 'kj', '<Esc>', { noremap = true })
 vim.api.nvim_set_keymap('v', 'kj', '<Esc>', { noremap = true })
 vim.g.mapleader = " "
 -- vim.cmd("set clipboard+=unnamedplus")
-
 -- Indents, tabs and spaces
 vim.cmd("set expandtab")
 vim.cmd("set shiftwidth=4")
@@ -50,6 +49,5 @@ vim.cmd("inoremap {;<CR> {<CR>};<ESC>O")
 -- vim.keymap.set("n", "<leader>y", '"+y')
 -- vim.keymap.set("v", "<leader>y", '"+y')
 -- vim.keymap.set("n", "<leader>Y", '"*Y')
-
 -- prime's blessings complete there
 
