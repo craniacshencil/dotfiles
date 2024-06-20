@@ -29,7 +29,23 @@ return {
                 capabilities = capabilities,
             })
             lspconfig.html.setup({
+                ft="html",
                 capabilities = capabilities,
+                opts = {
+                    settings = {
+                        html = {
+                            format = {
+                                templating = true,
+                                wrapLineLength = 120,
+                                wrapAttributes = "auto",
+                            },
+                            hover = {
+                                documentation = true,
+                                references = true,
+                            },
+                        },
+                    },
+                },
             })
 
             vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
