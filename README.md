@@ -11,7 +11,7 @@ completely copied
 - Some sneaky minor additions from random reddit threads
 
 ## i3 Configuration
-- Basic Structure copied from: [Typecraft's Linux for newbs(ep2 and ep3)](https://www.youtube.com/playlist?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
+- Basic Structure copied from: [Typecraft's Linux for newbs(ep2 and ep3)](https://www.youtube.com/playlist?list=PLsz00TDipIffGKMW4hmzmwXTvARXyJMn8)
 - Some sneaky minor additions from random reddit threads
 
 ## i3 statusbar Configuration
