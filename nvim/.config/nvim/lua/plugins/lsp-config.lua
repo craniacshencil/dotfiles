@@ -6,6 +6,9 @@ return {
 		end,
 	},
 	{
+		"mfussenegger/nvim-jdtls",
+	},
+	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
@@ -20,9 +23,6 @@ return {
 			require("lspconfig.ui.windows").default_options.border = "single"
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.jdtls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.pylsp.setup({
