@@ -1,8 +1,8 @@
 -- map escape to kj, map leader
-vim.api.nvim_set_keymap('i', 'kj', '<Esc>', { noremap = true })
-vim.api.nvim_set_keymap('v', 'kj', '<Esc>', { noremap = true })
+vim.api.nvim_set_keymap("i", "kj", "<Esc>", { noremap = true })
+vim.api.nvim_set_keymap("v", "kj", "<Esc>", { noremap = true })
 vim.g.mapleader = " "
--- vim.cmd("set clipboard+=unnamedplus")
+
 -- Indents, tabs and spaces
 vim.cmd("set expandtab")
 vim.cmd("set shiftwidth=4")
@@ -31,8 +31,7 @@ vim.keymap.set("n", "n", "nzzz")
 vim.keymap.set("n", "n", "nzzz")
 
 -- register-copying black-magic-sorcery-cluster-fuckery
-vim.keymap.set("x", "<leader>p", "\"_dP")
-
+vim.keymap.set("x", "<leader>sp", '"_dP')
 
 -- Autocomplete brackets and quotes
 vim.cmd('inoremap " ""<left>')
@@ -45,9 +44,12 @@ vim.cmd("inoremap {<CR> {<CR>}<ESC>O")
 vim.cmd("inoremap {;<CR> {<CR>};<ESC>O")
 
 -- copy-paste to system-clipboard(goated but can't figure it out)
--- no tmux noob
--- vim.keymap.set("n", "<leader>y", '"+y')
--- vim.keymap.set("v", "<leader>y", '"+y')
--- vim.keymap.set("n", "<leader>Y", '"*Y')
--- prime's blessings complete there
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
+vim.keymap.set({ "n", "v" }, "<leader>Y", '"+yg_')
 
+vim.keymap.set({ "n", "v" }, "<leader>d", '"+d')
+vim.keymap.set({ "n", "v" }, "<leader>D", '"+dg_')
+
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
+vim.keymap.set({ "n", "v" }, "<leader>P", '"+P')
+-- prime's blessings complete there
