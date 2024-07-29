@@ -12,9 +12,6 @@ return {
                 null_ls.builtins.formatting.golines,
                 null_ls.builtins.formatting.goimports,
                 null_ls.builtins.formatting.prettierd,
-                null_ls.builtins.diagnostics.staticcheck,
-                null_ls.builtins.formatting.google_java_format,
-                null_ls.builtins.formatting.sql_formatter,
             },
             on_attach = function(client, bufnr)
                 if client.supports_method("textDocument/formatting") then
@@ -32,6 +29,5 @@ return {
                 end
             end,
         })
-        -- vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
-    end,
+      end
 }

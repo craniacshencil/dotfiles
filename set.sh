@@ -19,7 +19,7 @@ sudo tar -C /opt -xzf nvim-linux64.tar.gz
 rm nvim-linux64.tar.gz
 
 echo "create alias in bashrc..."
-# echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> $bashrc
+echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> $bashrc
 
 echo "stowing neovim"
 cd $dotfile 
@@ -40,12 +40,14 @@ curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 sudo -E bash nodesource_setup.sh
 sudo apt install -y nodejs
 
-echo "getting tmux"
-git clone https://github.com/tmux/tmux.git
-cd tmux
+echo "getting tmux dependencies..."
 sudo apt install -y autoconf
 sudo apt install -y yacc
 sudo apt install -y libevent-dev 
+
+echo "getting tmux"
+git clone https://github.com/tmux/tmux.git
+cd tmux
 sh autogen.sh
 ./configure
 make && sudo make install
