@@ -34,7 +34,6 @@ zinit light Aloxaf/fzf-tab
 # Add in snippets
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
 zinit snippet OMZP::aws
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
@@ -67,6 +66,7 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
@@ -79,9 +79,10 @@ alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
 alias tmux="TERM=xterm-256color tmux"
+alias cdir='cd $(find . -type d -print | fzf)'
 
-# Shell integrations
-# eval "$(fzf --zsh)"
+# Set up fzf key bindings and fuzzy completion
+# source <(fzf --zsh)
 # eval "$(zoxide init --cmd cd zsh)"
 
 # >>> conda initialize >>>
