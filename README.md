@@ -1,6 +1,10 @@
 # dotfiles
 
-completely copied
+completely copied but slightly customized
+
+## Set.sh
+
+- This is a script for setting up tmux and neovim according from this repo (installing dependencies) on debian based systems (assumes your shell is bash).
 
 ## Neovim Configuration
 

@@ -1,51 +1,53 @@
 dotfile="$HOME/dotfiles"
 bashrc="$HOME/.bashrc"
-echo "getting git..."
+echo "Getting git..."
 sudo apt install git -y
 
-echo "getting stow..."
+echo "Getting stow..."
 sudo apt install stow -y
 
-echo "getting curl..."
+echo "Getting curl..."
 sudo apt install curl -y
 
-echo "cloning dotfiles..."
+echo "Cloning dotfiles..."
 git clone https://github.com/craniacshencil/dotfiles
 
-echo "getting neovim..."
+echo "Getting neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
 rm nvim-linux64.tar.gz
 
-echo "create alias in bashrc..."
-echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> $bashrc
+echo "Create alias in bashrc..."
+echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >>$bashrc
 
-echo "stowing neovim"
-cd $dotfile 
+echo "Stowing neovim"
+cd $dotfile
 stow nvim
-stow tmux 
-cd 
+stow tmux
+cd
 
-echo "getting jetbrains..."
+echo "Getting JetBrainsMono Font ..."
 curl -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
-cd ~/.local/share/fonts 
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts
 unzip JetBrainsMono.zip
-rm JetBrainsMono.zip 
+rm JetBrainsMono.zip
 fc-cache -fv
 cd
 
-echo "getting nodejs..."
+echo "Getting nodejs 22.x ..."
 curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 sudo -E bash nodesource_setup.sh
 sudo apt install -y nodejs
+rm nodesource_setup.sh
 
-echo "getting tmux dependencies..."
+echo "Getting tmux dependencies..."
 sudo apt install -y autoconf
 sudo apt install -y yacc
-sudo apt install -y libevent-dev 
+sudo apt install -y libevent-dev
 
-echo "getting tmux"
+echo "Getting and Building tmux"
 git clone https://github.com/tmux/tmux.git
 cd tmux
 sh autogen.sh
