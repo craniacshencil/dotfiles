@@ -20,6 +20,7 @@ bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 
+bindsym $mod+o exec ~/obsidian-notes/Obsidian.AppImage 
 set $mod Mod1
 
 # Font for window titles set it to 0 so that titles are not visible

@@ -1,5 +1,6 @@
 dotfile="$HOME/dotfiles"
 bashrc="$HOME/.bashrc"
+
 echo "Getting git..."
 sudo apt install git -y
 
@@ -8,9 +9,6 @@ sudo apt install stow -y
 
 echo "Getting curl..."
 sudo apt install curl -y
-
-echo "Cloning dotfiles..."
-git clone https://github.com/craniacshencil/dotfiles
 
 echo "Getting neovim..."
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
@@ -21,18 +19,18 @@ rm nvim-linux64.tar.gz
 echo "Create alias in bashrc..."
 echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >>$bashrc
 
-echo "Stowing neovim"
+echo "Stowing neovim and tmux"
 cd $dotfile
 stow nvim
 stow tmux
 cd
 
-echo "Getting JetBrainsMono Font ..."
-curl -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+echo "Getting Hack Font ..."
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
-unzip JetBrainsMono.zip
-rm JetBrainsMono.zip
+curl -OL https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
+unzip Hack.zip
+rm Hack.zip
 fc-cache -fv
 cd
 
@@ -54,3 +52,15 @@ sh autogen.sh
 ./configure
 make && sudo make install
 rm -rf tmux
+
+echo ""
+echo ""
+echo ""
+echo "======================================================="
+echo "Finished setting up..."
+echo "Go to your shell preferences and change font to 'Hack'"
+echo "You can now work with tmux and neovim"
+echo "======================================================="
+echo ""
+echo ""
+echo ""
