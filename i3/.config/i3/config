@@ -12,6 +12,7 @@
 
 #setting picom, feh, rofi
 exec --no-startup-id picom --experimental-backends  
+exec --no-startup-id battery
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/cool_bg.jpg 
 bindsym $mod+space exec rofi -show combi
 bindsym $mod+x exec rofi -show power-menu -modi power-menu:rofi-power-menu 
@@ -34,7 +35,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim -o --select | xclip -selectio
 bindsym $mod+o exec ~/obsidian-notes/Obsidian.AppImage 
 set $mod Mod1
 
-# Font for window titles set it to 0 so that titles are not visible
+# Font for window titles set
 font pango:Meslo LGM Nerd Font 0 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left

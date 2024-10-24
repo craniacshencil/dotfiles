@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while true; do
+	# Get the current battery percentage
+	battery_level=$(cat /sys/class/power_supply/BAT0/capacity)
+
+	# Check if the battery is discharging and below 20%
+	charging_status=$(cat /sys/class/power_supply/BAT0/status)
+	if [ "$charging_status" == "Discharging" ] && [ "$battery_level" -le 20 ]; then
+		notify-send "Battery low" "Battery level is ${battery_level}%"
+	fi
+
+	# Wait 5 minutes before checking again
+	sleep 300
+done
