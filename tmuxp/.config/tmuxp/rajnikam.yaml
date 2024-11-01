@@ -1,0 +1,12 @@
+session_name: rajnikam
+windows:
+  - window_name: vim
+    panes:
+      - shell_command:
+          - "cd ~/projects/rajnikam"
+          - "vim"
+  - window_name: dev
+    panes:
+      - shell_command:
+          - "cd ~/projects/rajnikam"
+          - "npm run dev"
