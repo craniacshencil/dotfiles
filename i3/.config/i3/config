@@ -15,7 +15,7 @@ exec --no-startup-id picom --experimental-backends
 exec --no-startup-id ~/dotfiles/scripts/battery
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/cool_bg.jpg 
 bindsym $mod+space exec rofi -show combi
-bindsym $mod+x exec rofi -show power-menu -modi power-menu:~/dotfiles/scripts/rofi-power-menu/.local/bin/rofi-power-menu
+bindsym $mod+x exec rofi -show power-menu -modi power-menu:~/dotfiles/scripts/rofi-power-menu
 
 #brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -31,10 +31,12 @@ bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t ima
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim -o --select | xclip -selection clipboard -t image/png
 
-#obsidian
+# App controls
 bindsym $mod+o exec ~/obsidian-notes/Obsidian.AppImage 
 bindsym $mod+i exec firefox 
 bindsym $mod+d exec xreader 
+# file manager
+bindsym $mod+e exec nemo 
 
 # Font for window titles set
 font pango:Meslo LGM Nerd Font 0 
@@ -115,9 +117,9 @@ bindsym $mod+v split v
 # bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle

@@ -2,7 +2,7 @@
 
 completely copied but slightly customized
 
-## Set.sh
+## set.sh
 
 - This is a script for setting up tmux and neovim according from this repo (installing dependencies) on debian based systems (assumes your shell is bash).
 
@@ -30,10 +30,6 @@ completely copied but slightly customized
 
 - copied from: [Eric Murphy's video](https://www.youtube.com/watch?v=TutfIwxSE_s)
 
-## Rofi-power-menu Configuration
-
-- copied from: [Github repository](https://github.com/jluttine/rofi-power-menu/blob/master/rofi-power-menu)
-
 ## Picom Configuration
 
 - copied from [Eric Murphy's video](https://www.youtube.com/watch?v=t6Klg7CvUxA)
@@ -42,6 +38,12 @@ completely copied but slightly customized
 
 - copied from : [Dreams of code](https://www.youtube.com/watch?v=ud7YxC33Z3w)
 - NOTE: Delete my .p10k.zsh for customizing how your terminal looks
+
+## Scripts
+
+- rofi-power-menu: power-off, logout options [through rofi](https://github.com/jluttine/rofi-power-menu/blob/master/rofi-power-menu)
+- lock: riced up i3lock from [Github repository](https://github.com/Raymo111/i3lock-color)
+- battery: small script written to display notification when battery percentage when it drops below 20%
 
 ## Background Image credits
 
