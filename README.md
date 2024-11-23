@@ -2,6 +2,18 @@
 
 completely copied but slightly customized
 
+![vim](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-vim-cmatrix-terminal.png)
+
+![home](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-homepage.png)
+
+![scripts](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-neofetch-tty-clock-cbonsai-pipes.png)
+
+![i3lock](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-i3lock.png)
+
+![rofi](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-rofi-firefox.png)
+
+
+
 ## set.sh
 
 - This is a script for setting up tmux and neovim according from this repo (installing dependencies) on debian based systems (assumes your shell is bash).
