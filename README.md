@@ -12,43 +12,42 @@ completely copied but slightly customized
 
 ![rofi](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-rofi-firefox.png)
 
-
-
 ## set.sh
 
 - This is a script for setting up tmux and neovim according from this repo (installing dependencies) on debian based systems (assumes your shell is bash).
 
-## Neovim Configuration
+## Neovim
 
-- Basic Structure copied from: [Typecraft's Neovim for newbs](https://www.youtube.com/playlist?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
-- Some snippets copied from: [Dreams of code](https://www.youtube.com/@dreamsofcode)
+- Basic Structure source: [Typecraft's Neovim for newbs](https://www.youtube.com/playlist?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
+- Some snippets source: [Dreams of code](https://www.youtube.com/@dreamsofcode)
   - [Golang Setup](https://www.youtube.com/watch?v=i04sSQjd-qo)
   - [Python Setup](https://www.youtube.com/watch?v=4BnVeOUeZxc)
-- Blazing fast keymappings copied from: [ThePrimeagen](https://www.youtube.com/c/theprimeagen)
+- Blazing fast keymappings source: [ThePrimeagen](https://www.youtube.com/c/theprimeagen)
   - [init.lua from scratch](https://www.youtube.com/watch?v=w7i4amO_zaE)
-- Some sneaky minor additions from random reddit threads
 
-## i3 Configuration
+## i3
 
-- Basic Structure copied from: [Typecraft's Linux for newbs(ep2 and ep3)](https://www.youtube.com/playlist?list=PLsz00TDipIffGKMW4hmzmwXTvARXyJMn8)
-- Some sneaky minor additions from random reddit threads
+- source: [Typecraft's Linux for newbs(ep2 and ep3)](https://www.youtube.com/playlist?list=PLsz00TDipIffGKMW4hmzmwXTvARXyJMn8)
 
-## i3 statusbar Configuration
+## i3status
 
-- copied from: [It's FOSS article](https://itsfoss.com/i3-customization/)
-- Some sneaky minor additions from random reddit threads
+- source: [It's FOSS article](https://itsfoss.com/i3-customization/)
 
-## Rofi Configuration
+## Polybar
 
-- copied from: [Eric Murphy's video](https://www.youtube.com/watch?v=TutfIwxSE_s)
+- source: [typecraft's dots](https://github.com/typecraft-dev/dotfiles/tree/master/polybar/.config/polybar)
 
-## Picom Configuration
+## Rofi
 
-- copied from [Eric Murphy's video](https://www.youtube.com/watch?v=t6Klg7CvUxA)
+- source: [Eric Murphy's video](https://www.youtube.com/watch?v=TutfIwxSE_s)
 
-## Zsh Configuration
+## Picom
 
-- copied from : [Dreams of code](https://www.youtube.com/watch?v=ud7YxC33Z3w)
+- source [Eric Murphy's video](https://www.youtube.com/watch?v=t6Klg7CvUxA)
+
+## Zsh
+
+- source : [Dreams of code](https://www.youtube.com/watch?v=ud7YxC33Z3w)
 - NOTE: Delete my .p10k.zsh for customizing how your terminal looks
 
 ## Scripts
