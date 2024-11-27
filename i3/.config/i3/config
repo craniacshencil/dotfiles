@@ -11,7 +11,7 @@
 
 set $mod Mod1
 #setting picom, feh, rofi
-exec --no-startup-id picom --experimental-backends  
+exec --no-startup-id picom 
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh 
 exec --no-startup-id ~/dotfiles/scripts/battery
@@ -224,16 +224,33 @@ bindsym $mod+r mode "resize"
 # }
 
 #remove borders from all windows 
-for_window [class="^.*"] border pixel 2 
+for_window [class="^.*"] border pixel 3
+gaps outer 5px
+gaps inner 10px
+
 # Color shemes for windows 
-set $bar-color  #523d6499
-set $in-bgcolor #3636364D
-set $focused-ws #f542c560
-set $bgcolor    #f542c560
-set $text       #ffffff
-set $u-bgcolor  #ff0000
-set $indicator  #a8a3c1
-set $in-text    #969696
+set $gruv_bg      #282828
+set $gruv_fg      #ebdbb2
+set $gruv_yellow  #d79921
+set $gruv_red     #cc241d
+set $gruv_green   #98971a
+set $gruv_blue    #458588
+set $gruv_purple  #b16286
+set $gruv_aqua    #689d6a
+set $gruv_gray    #a89984
+set $gruv_orange  #d65d0e
+
+# set $bgcolor $gruv_orange -> this syntax doesn't work, took 10 minutes to figure out
+# don't make this mistake again please
+set $bgcolor      #d7992190
+set $text         #ebdbb2
+set $indicator    #d7992190
+
+set $in-bgcolor   #ebdbb290
+set $in-text      #ebdbb2
+
+set $u-bgcolor    #cc241d
+set $u-text       #cc241d
 #                       border          background      text            indicator (a line which shows where the next window will be placed)     
 client.focused          $bgcolor        $bgcolor        $text           $indicator
 client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
