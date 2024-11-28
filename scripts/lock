@@ -1,38 +1,38 @@
 #!/bin/sh
 
-BLANK='#00000000'
+# #RRGGBBAA
+BLANK='#28282800'
 CLEAR='#F5E0DC22'
-DEFAULT='#F5C2E7CC'
-TEXT='#CBA6F7EE'
-WRONG='#F38BA8BB'
-KEYHL='#FFFFFFFF'
-VERIFYING='#B4BEF8BB'
+DEFAULT='#d79921CC'
+TEXT='#ebdbb2EE'
+WRONG='#cc241dBB'
+KEYHL='#FFFFFF'
 
 i3lock \
-  --image=/home/raj/dotfiles/backgrounds/lock.png \
-  --insidever-color=$CLEAR \
-  --ringver-color=$DEFAULT \
-  \
-  --insidewrong-color=$CLEAR \
-  --ringwrong-color=$WRONG \
-  \
-  --inside-color=$BLANK \
-  --ring-color=$DEFAULT \
-  --line-color=$BLANK \
-  --separator-color=$DEFAULT \
-  \
-  --verif-color=$TEXT \
-  --wrong-color=$TEXT \
-  --time-color=$TEXT \
-  --date-color=$KEYHL \
-  --layout-color=$TEXT \
-  --keyhl-color=$KEYHL \
-  --bshl-color=$WRONG \
-  \
-  --screen 1 \
-  --blur 20 \
-  --clock \
-  --indicator \
-  --time-str="%H:%M" \
-  --date-str="%A"
+	--image=/home/raj/dotfiles/backgrounds/gruv_lock.png \
+	--insidever-color=$CLEAR \
+	--ringver-color=$DEFAULT \
+	\
+	--insidewrong-color=$CLEAR \
+	--ringwrong-color=$WRONG \
+	\
+	--inside-color=$BLANK \
+	--ring-color=$DEFAULT \
+	--line-color=$BLANK \
+	--separator-color=$DEFAULT \
+	\
+	--verif-color=$TEXT \
+	--wrong-color=$WRONG \
+	--time-color=$TEXT \
+	--date-color=$TEXT \
+	--layout-color=$TEXT \
+	--keyhl-color=$KEYHL \
+	--bshl-color=$WRONG \
+	\
+	--screen 1 \
+	--blur 20 \
+	--clock \
+	--indicator \
+	--time-str="%H:%M" \
+	--date-str="%A"
 #	--keylayout 2
