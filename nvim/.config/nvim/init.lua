@@ -14,4 +14,5 @@ vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
 require("personal-mappings")
+require("ccrypt")
 require("lazy").setup("plugins")

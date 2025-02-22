@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "html", "lua_ls", "pylsp", "gopls", "tsserver", "bashls" },
+        ensure_installed = { "html", "lua_ls", "pylsp", "gopls", "ts_ls", "bashls" },
       })
     end,
   },
@@ -22,6 +22,7 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
+      lspconfig.mdx_analyzer.setup({})
       lspconfig.bashls.setup({
         capabilities = capabilities,
       })
@@ -31,7 +32,7 @@ return {
       lspconfig.gopls.setup({
         capabilities = capabilities,
       })
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities,
       })
       lspconfig.html.setup({

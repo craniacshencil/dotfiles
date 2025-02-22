@@ -77,6 +77,7 @@ alias c='clear'
 alias tmux="TERM=xterm-256color tmux"
 alias cdir='cd $(find ~ -type d -not -path "*/\.*" -print | rg -v "node_modules" | rg -v "miniconda3" | rg -v "\.git" | rg -v "go" | fzf)'
 
+
 # Set up fzf key bindings and fuzzy completion
 # source <(fzf --zsh)
 # eval "$(zoxide init --cmd cd zsh)"
