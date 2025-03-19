@@ -1,0 +1,21 @@
+#!/bin/bash
+JOURNAL_CPT="$HOME/.journal.cpt"
+JOURNAL="$HOME/.journal"
+
+# Ensure encrypted file exists
+if [[ ! -f "$JOURNAL_CPT" ]]; then
+  echo "No encrypted journal found!"
+  exit 1
+fi
+
+# Attempt to decrypt
+echo "Enter password to decrypt the journal:"
+ccrypt -d "$JOURNAL_CPT" -c >"$JOURNAL" 2>/dev/null
+
+if [[ $? -ne 0 ]]; then
+  echo "Incorrect password. Exiting."
+  exit 1
+else
+  echo "Journal decrypted successfully. You can now edit."
+  rm -f $JOURNAL_CPT
+fi

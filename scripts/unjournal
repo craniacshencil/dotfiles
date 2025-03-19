@@ -1,0 +1,21 @@
+#!/bin/bash
+JOURNAL="$HOME/.journal"
+JOURNAL_CPT="$HOME/.journal.cpt"
+
+# Check if plaintext journal exists
+if [[ ! -f "$JOURNAL" ]]; then
+  echo "No plaintext journal found!"
+  exit 1
+fi
+
+# Encrypt the file
+echo "Enter password to encrypt the journal:"
+ccrypt -e "$JOURNAL"
+
+if [[ $? -eq 0 ]]; then
+  echo "Journal encrypted successfully."
+  rm -f "$JOURNAL"
+else
+  echo "Failed to encrypt the journal."
+  exit 1
+fi
