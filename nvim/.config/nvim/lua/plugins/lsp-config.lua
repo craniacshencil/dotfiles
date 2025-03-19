@@ -28,6 +28,16 @@ return {
       })
       lspconfig.pylsp.setup({
         capabilities = capabilities,
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = {
+                ignore = { "E501" },
+                maxLineLength = 88,
+              },
+            },
+          },
+        },
       })
       lspconfig.gopls.setup({
         capabilities = capabilities,
