@@ -80,6 +80,9 @@ alias journal='~/dotfiles/scripts/journal'
 alias unjournal='~/dotfiles/scripts/unjournal'
 alias vimj='vim ~/.journal'
 
+# setting up some defaults
+export EDITOR=nvim
+
 # Set up fzf key bindings and fuzzy completion
 # source <(fzf --zsh)
 # eval "$(zoxide init --cmd cd zsh)"
@@ -97,7 +100,16 @@ else
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
 conda deactivate
+# <<< conda initialize <<<
 
-export EDITOR=nvim
+# yazi function from docs
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
