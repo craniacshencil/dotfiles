@@ -27,3 +27,4 @@ font-style="Regular"
 adjust-cell-height=30%
 adjust-cell-width=5%
 font-size=13
+confirm-close-surface=false

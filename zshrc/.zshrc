@@ -64,6 +64,7 @@ alias cdir='cd $(find ~ -type d -not -path "*/\.*" -print | rg -v "node_modules"
 alias journal='~/dotfiles/scripts/journal'
 alias unjournal='~/dotfiles/scripts/unjournal'
 alias vimj='vim ~/.journal'
+alias pace='python3 ~/dotfiles/scripts/pace.py'
 
 # setting up some defaults
 export EDITOR=nvim
