@@ -42,7 +42,6 @@ vim.cmd("inoremap [ []<left>")
 vim.cmd("inoremap { {}<left>")
 vim.cmd("inoremap {<CR> {<CR>}<ESC>O")
 vim.cmd("inoremap {;<CR> {<CR>};<ESC>O")
-
 -- copy-paste to system-clipboard(goated but can't figure it out)
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
 vim.keymap.set({ "n", "v" }, "<leader>Y", '"+yg_')

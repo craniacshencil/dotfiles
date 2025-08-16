@@ -101,3 +101,6 @@ function y() {
 
 # Add starship
 eval "$(starship init zsh)"
+
+# run journal check
+$HOME/dotfiles/scripts/journalcheck
