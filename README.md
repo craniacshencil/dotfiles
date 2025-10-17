@@ -56,4 +56,4 @@ completely copied but slightly customized
 
 ## Background Image credits
 
-- credits: [Gruvbox wallpapers repo](https://gruvbox-wallpapers.pages.dev/wallpapers/minimalistic/gruv-abstract-maze.png)
+- credits: [From Linus Weber](https://www.behance.net/gallery/180359625/Aether-logo-Design)

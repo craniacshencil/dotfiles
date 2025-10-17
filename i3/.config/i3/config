@@ -15,7 +15,7 @@ exec --no-startup-id picom
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh 
 exec --no-startup-id ~/dotfiles/scripts/battery
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/gruv.png
+exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/gruv_grainy.jpeg
 bindsym $mod+space exec rofi -show combi
 bindsym $mod+x exec rofi -show power-menu -modi power-menu:~/dotfiles/scripts/rofi-power-menu
 
