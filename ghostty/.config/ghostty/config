@@ -28,3 +28,8 @@ adjust-cell-height=30%
 adjust-cell-width=5%
 font-size=13
 confirm-close-surface=false
+
+# background settings
+background=#000000
+background-opacity=0.65
+background-blur=true
