@@ -2,15 +2,15 @@
 
 completely copied but slightly customized
 
-![vim](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-vim-cmatrix-terminal.png)
+![bg](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/bg.png)
 
-![home](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-homepage.png)
+![vim](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/vim-terminal.png)
 
-![scripts](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-neofetch-tty-clock-cbonsai-pipes.png)
+![scripts](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/scripts.png)
 
-![i3lock](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-i3lock.png)
+![i3lock](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/i3lock.png)
 
-![rofi](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-rofi-firefox.png)
+![rofi](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/rofi-browser.png)
 
 ## set.sh
 
@@ -24,14 +24,11 @@ completely copied but slightly customized
   - [Python Setup](https://www.youtube.com/watch?v=4BnVeOUeZxc)
 - Blazing fast keymappings source: [ThePrimeagen](https://www.youtube.com/c/theprimeagen)
   - [init.lua from scratch](https://www.youtube.com/watch?v=w7i4amO_zaE)
+- [Gruvbox theme](https://github.com/sainnhe/gruvbox-material)
 
 ## i3
 
 - source: [Typecraft's Linux for newbs(ep2 and ep3)](https://www.youtube.com/playlist?list=PLsz00TDipIffGKMW4hmzmwXTvARXyJMn8)
-
-## i3status
-
-- source: [It's FOSS article](https://itsfoss.com/i3-customization/)
 
 ## Polybar
 
@@ -39,7 +36,7 @@ completely copied but slightly customized
 
 ## Rofi
 
-- source: [Eric Murphy's video](https://www.youtube.com/watch?v=TutfIwxSE_s)
+- source: [Gruvbox rofi theme](https://github.com/bardisty/gruvbox-rofi)
 
 ## Picom
 
@@ -48,14 +45,15 @@ completely copied but slightly customized
 ## Zsh
 
 - source : [Dreams of code](https://www.youtube.com/watch?v=ud7YxC33Z3w)
-- NOTE: Delete my .p10k.zsh for customizing how your terminal looks
 
 ## Scripts
 
 - rofi-power-menu: power-off, logout options [through rofi](https://github.com/jluttine/rofi-power-menu/blob/master/rofi-power-menu)
 - lock: riced up i3lock from [Github repository](https://github.com/Raymo111/i3lock-color)
 - battery: small script written to display notification when battery percentage when it drops below 20%
+- pace: for calculating running pace
+- journal & unjournal: for encrypting/decrypting files with ccrypt
 
 ## Background Image credits
 
-- credits: [Lorenzo Herrera's retro neon wallpaper](https://unsplash.com/photos/vintage-gray-game-console-and-joystick-p0j-mE6mGo4)
+- credits: [Gruvbox wallpapers repo](https://gruvbox-wallpapers.pages.dev/wallpapers/minimalistic/gruv-abstract-maze.png)
