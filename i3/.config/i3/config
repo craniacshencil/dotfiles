@@ -18,6 +18,8 @@ exec --no-startup-id ~/dotfiles/scripts/battery
 exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/gruv_grainy.jpeg
 bindsym $mod+space exec rofi -show combi
 bindsym $mod+x exec rofi -show power-menu -modi power-menu:~/dotfiles/scripts/rofi-power-menu
+# /home/raj/.config/networkmanager-dmenu/config.ini config file here
+bindsym $mod+n exec networkmanager_dmenu
 
 #brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
