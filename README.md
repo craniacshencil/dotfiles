@@ -2,15 +2,15 @@
 
 completely copied but slightly customized
 
-![vim](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-vim-cmatrix-terminal.png)
+![home](https://github.com/craniacshencil/dotfiles/blob/old-neon/screenshots/old-homepage.png)
 
-![home](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-homepage.png)
+![vim](https://github.com/craniacshencil/dotfiles/blob/old-neon/screenshots/old-vim-cmatrix-terminal.png)
 
-![scripts](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-neofetch-tty-clock-cbonsai-pipes.png)
+![scripts](https://github.com/craniacshencil/dotfiles/blob/old-neon/screenshots/old-neofetch-tty-clock-cbonsai-pipes.png)
 
-![i3lock](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-i3lock.png)
+![i3lock](https://github.com/craniacshencil/dotfiles/blob/old-neon/screenshots/old-i3lock.png)
 
-![rofi](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/old-rofi-firefox.png)
+![rofi](https://github.com/craniacshencil/dotfiles/blob/old-neon/screenshots/old-rofi-firefox.png)
 
 ## set.sh
 
