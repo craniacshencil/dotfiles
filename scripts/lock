@@ -9,30 +9,30 @@ WRONG='#cc241dBB'
 KEYHL='#FFFFFF'
 
 i3lock \
-	--image=/home/raj/dotfiles/backgrounds/gruv_lock.png \
-	--insidever-color=$CLEAR \
-	--ringver-color=$DEFAULT \
-	\
-	--insidewrong-color=$CLEAR \
-	--ringwrong-color=$WRONG \
-	\
-	--inside-color=$BLANK \
-	--ring-color=$DEFAULT \
-	--line-color=$BLANK \
-	--separator-color=$DEFAULT \
-	\
-	--verif-color=$TEXT \
-	--wrong-color=$WRONG \
-	--time-color=$TEXT \
-	--date-color=$TEXT \
-	--layout-color=$TEXT \
-	--keyhl-color=$KEYHL \
-	--bshl-color=$WRONG \
-	\
-	--screen 1 \
-	--blur 20 \
-	--clock \
-	--indicator \
-	--time-str="%H:%M" \
-	--date-str="%A"
+  --image=/home/raj/dotfiles/backgrounds/gruv_grainy_lock.jpeg \
+  --insidever-color=$CLEAR \
+  --ringver-color=$DEFAULT \
+  \
+  --insidewrong-color=$CLEAR \
+  --ringwrong-color=$WRONG \
+  \
+  --inside-color=$BLANK \
+  --ring-color=$DEFAULT \
+  --line-color=$BLANK \
+  --separator-color=$DEFAULT \
+  \
+  --verif-color=$TEXT \
+  --wrong-color=$WRONG \
+  --time-color=$TEXT \
+  --date-color=$TEXT \
+  --layout-color=$TEXT \
+  --keyhl-color=$KEYHL \
+  --bshl-color=$WRONG \
+  \
+  --screen 1 \
+  --blur 20 \
+  --clock \
+  --indicator \
+  --time-str="%H:%M" \
+  --date-str="%A"
 #	--keylayout 2
