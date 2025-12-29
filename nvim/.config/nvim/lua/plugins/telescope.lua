@@ -15,7 +15,7 @@ return {
 						"dist",
 						"yarn.lock",
 						"vendor",
-						".git",
+						".git/",
 					},
 				},
 				pickers = {
