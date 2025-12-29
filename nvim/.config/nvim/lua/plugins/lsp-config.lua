@@ -6,27 +6,21 @@ return {
     end,
   },
   {
-    "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "html", "lua_ls", "pylsp", "gopls", "ts_ls", "bashls" },
-      })
-    end,
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+      { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
+    },
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
-      require("lspconfig.ui.windows").default_options.border = "single"
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("*", {
         capabilities = capabilities,
       })
-      lspconfig.mdx_analyzer.setup({})
-      lspconfig.bashls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.pylsp.setup({
+      vim.lsp.config("pylsp", {
         capabilities = capabilities,
         settings = {
           pylsp = {
@@ -39,31 +33,12 @@ return {
           },
         },
       })
-      lspconfig.gopls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.ts_ls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.html.setup({
-        ft = "html",
-        capabilities = capabilities,
-        opts = {
-          settings = {
-            html = {
-              format = {
-                templating = true,
-                wrapLineLength = 120,
-                wrapAttributes = "auto",
-              },
-              hover = {
-                documentation = true,
-                references = true,
-              },
-            },
-          },
-        },
-      })
+      vim.lsp.enable("lua_ls")
+      vim.lsp.enable("bashls")
+      vim.lsp.enable("pylsp")
+      vim.lsp.enable("ts_ls")
+      vim.lsp.enable("gopls")
+      require("lspconfig.ui.windows").default_options.border = "single"
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -71,9 +46,9 @@ return {
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 
       -- Add border on hitting 'K'
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = "single",
-      })
+      -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+      --   border = "single",
+      -- })
     end,
   },
 }
