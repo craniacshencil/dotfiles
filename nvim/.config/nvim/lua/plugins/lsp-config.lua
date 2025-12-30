@@ -20,6 +20,9 @@ return {
 			vim.lsp.config("*", {
 				capabilities = capabilities,
 			})
+			vim.diagnostic.config({
+				virtual_text = true,
+			})
 			vim.lsp.config("pylsp", {
 				capabilities = capabilities,
 				settings = {
