@@ -1,54 +1,63 @@
--- map escape to kj, map leader
-vim.api.nvim_set_keymap("i", "kj", "<Esc>", { noremap = true })
-vim.api.nvim_set_keymap("v", "kj", "<Esc>", { noremap = true })
+-- general
+local map = vim.keymap.set
+map("i", "kj", "<Esc>", { noremap = true })
+map("v", "kj", "<Esc>", { noremap = true })
 vim.g.mapleader = " "
+vim.opt.swapfile = false
+vim.opt.termguicolors = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.encoding = "UTF-8"
 
 -- Indents, tabs and spaces
-vim.cmd("set expandtab")
-vim.cmd("set shiftwidth=2")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
 
--- Line numbers and relative line numbers
-vim.cmd("set relativenumber")
-vim.cmd("set number")
-
--- for devicons
-vim.cmd("set encoding=UTF-8")
+-- windows
+vim.opt.winborder = "rounded"
+vim.o.winblend = 0
+vim.o.pumblend = 0
 
 -- blessed by theprimeagen
 -- move selected lines up and down(with indentation)
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
 
 -- 'J' but cursor stays at start of the line
-vim.keymap.set("n", "J", "mzJ`z")
+map("n", "J", "mzJ`z")
 
 -- stay in the middle of the page when scrolling, search and find
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzz")
-vim.keymap.set("n", "n", "nzzz")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzz")
+map("n", "n", "nzzz")
 
 -- register-copying black-magic-sorcery-cluster-fuckery
-vim.keymap.set("x", "<leader>sp", '"_dP')
+map("x", "<leader>gp", '"_dP', { noremap = true })
 
 -- Autocomplete brackets and quotes
-vim.cmd('inoremap " ""<left>')
-vim.cmd("inoremap ' ''<left>")
-vim.cmd("inoremap ` ``<left>")
-vim.cmd("inoremap ( ()<left>")
-vim.cmd("inoremap [ []<left>")
-vim.cmd("inoremap { {}<left>")
-vim.cmd("inoremap {<CR> {<CR>}<ESC>O")
-vim.cmd("inoremap {;<CR> {<CR>};<ESC>O")
+-- simple pair insertions
+map("i", '"', '""<Left>', { noremap = true })
+map("i", "'", "''<Left>", { noremap = true })
+map("i", "`", "``<Left>", { noremap = true })
+map("i", "(", "()<Left>", { noremap = true })
+map("i", "[", "[]<Left>", { noremap = true })
+map("i", "{", "{}<Left>", { noremap = true })
+
+-- block-style braces on Enter
+map("i", "{<CR>", "{<CR>}<Esc>O", { noremap = true })
+map("i", "{;<CR>", "{<CR>};<Esc>O", { noremap = true })
+
 -- copy-paste to system-clipboard(goated but can't figure it out)
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
-vim.keymap.set({ "n", "v" }, "<leader>Y", '"+yg_')
+map({ "n", "v" }, "<leader>y", '"+y')
+map({ "n", "v" }, "<leader>Y", '"+yg_')
 
-vim.keymap.set({ "n", "v" }, "<leader>d", '"+d')
-vim.keymap.set({ "n", "v" }, "<leader>D", '"+dg_')
+map({ "n", "v" }, "<leader>d", '"+d')
+map({ "n", "v" }, "<leader>D", '"+dg_')
 
-vim.keymap.set({ "n", "v" }, "<leader>p", '"+p')
-vim.keymap.set({ "n", "v" }, "<leader>P", '"+P')
+map({ "n", "v" }, "<leader>p", '"+p')
+map({ "n", "v" }, "<leader>P", '"+P')
 -- prime's blessings complete there
