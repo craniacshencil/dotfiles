@@ -41,18 +41,6 @@ return {
 			vim.lsp.enable("pylsp")
 			vim.lsp.enable("ts_ls")
 			vim.lsp.enable("gopls")
-			vim.lsp.enable("mdx_analyzer")
-			require("lspconfig.ui.windows").default_options.border = "single"
-
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-
-			-- Add border on hitting 'K'
-			-- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-			--   border = "single",
-			-- })
 		end,
 	},
 }
