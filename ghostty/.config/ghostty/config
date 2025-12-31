@@ -30,6 +30,6 @@ font-size=13
 confirm-close-surface=false
 
 # background settings
-background=#000000
+background=#222222
 background-opacity=0.65
 background-blur=true

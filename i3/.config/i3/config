@@ -227,7 +227,7 @@ bindsym $mod+r mode "resize"
 # }
 
 #remove borders from all windows 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 0
 gaps outer 5px
 gaps inner 10px
 
