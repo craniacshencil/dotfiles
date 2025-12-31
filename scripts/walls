@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+WALLPAPER_DIR="$HOME/dotfiles/backgrounds"
+STATE_FILE="$HOME/.cache/current_wallpaper"
+FEH_CMD="feh --bg-fill"
+
+mapfile -t WALLPAPERS < <(
+	find "$WALLPAPER_DIR" -maxdepth 1 -type f \
+		\( -iname "*.jpg" -o -iname "*.png" -o -iname "*.jpeg" \) | sort
+)
+
+[ ${#WALLPAPERS[@]} -eq 0 ] && exit 1
+
+# Default index
+INDEX=0
+
+if [[ -f "$STATE_FILE" ]]; then
+	INDEX=$(<"$STATE_FILE")
+fi
+
+# RESTORE mode (no increment)
+if [[ "$1" == "--restore" ]]; then
+	$FEH_CMD "${WALLPAPERS[$INDEX]}"
+	exit 0
+fi
+
+# NORMAL mode (advance)
+NEXT_INDEX=$(((INDEX + 1) % ${#WALLPAPERS[@]}))
+
+$FEH_CMD "${WALLPAPERS[$NEXT_INDEX]}"
+echo "$NEXT_INDEX" >"$STATE_FILE"

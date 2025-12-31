@@ -15,7 +15,8 @@ exec --no-startup-id picom
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh 
 exec --no-startup-id ~/dotfiles/scripts/battery
-exec_always --no-startup-id feh --bg-fill ~/dotfiles/backgrounds/gruv_grainy.jpeg
+exec_always --no-startup-id ~/dotfiles/scripts/walls --restore
+bindsym $mod+w exec ~/dotfiles/scripts/walls
 bindsym $mod+space exec rofi -show combi
 bindsym $mod+x exec rofi -show power-menu -modi power-menu:~/dotfiles/scripts/rofi-power-menu
 # /home/raj/.config/networkmanager-dmenu/config.ini config file here
@@ -122,7 +123,7 @@ bindsym $mod+v split v
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+a layout tabbed
 bindsym $mod+s layout toggle split
 
 # toggle tiling / floating
@@ -132,7 +133,7 @@ bindsym $mod+Shift+space floating toggle
 # bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child

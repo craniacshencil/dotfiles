@@ -53,7 +53,9 @@ completely copied but slightly customized
 - battery: small script written to display notification when battery percentage when it drops below 20%
 - pace: for calculating running pace
 - journal & unjournal: for encrypting/decrypting files with ccrypt
+- walls: for cycling through wallpapers
 
-## Background Image credits
+## Wallpapers
 
-- credits: [From Linus Weber](https://www.behance.net/gallery/180359625/Aether-logo-Design)
+- [From Linus Weber](https://www.behance.net/gallery/180359625/Aether-logo-Design)
+- [Rest from this site](https://gruvbox-wallpapers.pages.dev/)
