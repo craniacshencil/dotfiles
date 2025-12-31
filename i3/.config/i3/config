@@ -15,6 +15,7 @@ exec --no-startup-id picom
 exec_always killall polybar
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh 
 exec --no-startup-id ~/dotfiles/scripts/battery
+exec --no-startup-id ~/dotfiles/scripts/nightlight
 exec_always --no-startup-id ~/dotfiles/scripts/walls --restore
 bindsym $mod+w exec ~/dotfiles/scripts/walls
 bindsym $mod+space exec rofi -show combi

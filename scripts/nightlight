@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Prevent multiple instances
+if pgrep -f "$(basename "$0")" | grep -vq "$$"; then
+    exit 0
+fi
+
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
+
+STATE="unknown" # on | off
+
+while true; do
+    HOUR=$(date +%H)
+
+    if [ "$HOUR" -ge 19 ] || [ "$HOUR" -lt 8 ]; then
+        if [ "$STATE" != "on" ]; then
+            xsct 3500
+            notify-send --urgency=info --expire-time=3000 "Night light ON"
+            STATE="on"
+        fi
+    else
+        if [ "$STATE" != "off" ]; then
+            xsct 6500
+            notify-send --urgency=info --expire-time=3000 "Night light OFF"
+            STATE="off"
+        fi
+    fi
+
+    sleep 1200
+done
