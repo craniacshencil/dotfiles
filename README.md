@@ -54,6 +54,7 @@ completely copied but slightly customized
 - pace: for calculating running pace
 - journal & unjournal: for encrypting/decrypting files with ccrypt
 - walls: for cycling through wallpapers
+- nightlight: well night-light
 
 ## Wallpapers
 

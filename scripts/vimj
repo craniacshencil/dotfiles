@@ -1,0 +1,10 @@
+#!/bin/bash
+
+JOURNAL="$HOME/.journal"
+
+if [ ! -e "$JOURNAL" ]; then
+    echo "Error: $JOURNAL does not exist" >&2
+    exit 1
+fi
+
+vim "$JOURNAL"

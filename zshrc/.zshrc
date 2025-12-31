@@ -63,7 +63,7 @@ alias tmux="TERM=xterm-256color tmux"
 alias cdir='cd $(find ~ -type d -not -path "*/\.*" -print | rg -v "node_modules" | rg -v "miniconda3" | rg -v "\.git" | rg -v "go" | fzf)'
 alias journal='~/dotfiles/scripts/journal'
 alias unjournal='~/dotfiles/scripts/unjournal'
-alias vimj='vim ~/.journal'
+alias vimj='~/dotfiles/scripts/vimj'
 alias pace='python3 ~/dotfiles/scripts/pace.py'
 
 # setting up some defaults
