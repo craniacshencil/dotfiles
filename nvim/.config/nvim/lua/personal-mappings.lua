@@ -5,9 +5,24 @@ map("v", "kj", "<Esc>", { noremap = true })
 vim.g.mapleader = " "
 vim.opt.swapfile = false
 vim.opt.termguicolors = true
+vim.opt.encoding = "UTF-8"
+
+-- numbers and relativenumbers
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.encoding = "UTF-8"
+vim.o.cursorline = true
+local function set_linenr_colors()
+	vim.api.nvim_set_hl(0, "LineNr", { fg = "#999999" })
+	vim.api.nvim_set_hl(0, "CursorLineNr", { bold = true })
+end
+
+-- apply once on startup
+set_linenr_colors()
+
+-- re-apply whenever a colorscheme is loaded
+vim.api.nvim_create_autocmd("ColorScheme", {
+	callback = set_linenr_colors,
+})
 
 -- Indents, tabs and spaces
 vim.opt.expandtab = true
