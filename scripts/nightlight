@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Prevent multiple instances
-if pgrep -f "$(basename "$0")" | grep -vq "$$"; then
-    exit 0
-fi
+LOCKFILE="/tmp/nightlight-monitor.lock"
+
+exec 9>"$LOCKFILE" || exit 1
+flock -n 9 || exit 0
 
 export DISPLAY=:0
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
@@ -16,13 +16,13 @@ while true; do
     if [ "$HOUR" -ge 19 ] || [ "$HOUR" -lt 8 ]; then
         if [ "$STATE" != "on" ]; then
             xsct 3500
-            notify-send --urgency=info --expire-time=3000 "Night light ON"
+            notify-send --urgency=normal --expire-time=3000 "Night Light" "Night light ON: Time $(date +%H:%M)"
             STATE="on"
         fi
     else
         if [ "$STATE" != "off" ]; then
             xsct 6500
-            notify-send --urgency=info --expire-time=3000 "Night light OFF"
+            notify-send --urgency=normal --expire-time=3000 "Night Light" "Night light OFF: Time $(date +%H:%M)"
             STATE="off"
         fi
     fi

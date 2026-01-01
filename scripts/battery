@@ -1,22 +1,20 @@
 #!/bin/bash
 
-# Prevent multiple instances
-if pgrep -f "$(basename "$0")" | grep -vq "$$"; then
-    exit 0
-fi
+LOCKFILE="/tmp/battery-monitor.lock"
+
+exec 9>"$LOCKFILE" || exit 1
+flock -n 9 || exit 0
 
 export DISPLAY=:0
 
 while true; do
-    # Get the current battery percentage
-    battery_level=$(cat /sys/class/power_supply/BAT0/capacity)
+	battery_level=$(cat /sys/class/power_supply/BAT0/capacity)
+	charging_status=$(cat /sys/class/power_supply/BAT0/status)
 
-    # Check if the battery is discharging and below 20%
-    charging_status=$(cat /sys/class/power_supply/BAT0/status)
-    if [ "$charging_status" == "Discharging" ] && [ "$battery_level" -le 20 ]; then
-        notify-send --urgency=critical --expire-time=10000 "Low Battery!" "Battery level is ${battery_level}%"
-    fi
+	if [ "$charging_status" = "Discharging" ] && [ "$battery_level" -le 20 ]; then
+		notify-send --urgency=critical --expire-time=10000 \
+			"Low Battery!" "Battery level is ${battery_level}%"
+	fi
 
-    # Wait 5 minutes before checking again
-    sleep 300
+	sleep 300
 done
