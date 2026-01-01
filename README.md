@@ -2,15 +2,15 @@
 
 completely copied but slightly customized
 
-![bg](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/bg.png)
+![bg](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/new-year-26/bg.png)
 
-![vim](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/vim-terminal.png)
+![vim](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/new-year-26/vim-terminal.png)
 
-![scripts](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/scripts.png)
+![scripts](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/new-year-26/scripts.png)
 
-![i3lock](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/i3lock.png)
+![i3lock](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/new-year-26/i3lock.png)
 
-![rofi](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/gruvboxd-first/rofi-browser.png)
+![rofi](https://github.com/craniacshencil/dotfiles/blob/main/screenshots/new-year-26/rofi-browser.png)
 
 ## set.sh
 
